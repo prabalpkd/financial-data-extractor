@@ -1,5 +1,5 @@
 
-# Financial Data Extractor
+#📊📊 Financial Data Extractor
 
 This project builds a **Financial Data Extraction** system that converts unstructured financial paragraphs into structured metrics.  
 It extracts key values such as **Actual Revenue, Expected Revenue, Actual EPS, and Expected EPS** using **LangChain, Groq, and Llama-3.3-70B**, and presents them in a clean table using **Streamlit**.
@@ -8,17 +8,11 @@ It extracts key values such as **Actual Revenue, Expected Revenue, Actual EPS, a
 
 ## 📸 Live Demo (Optional)
 
-*If you deploy the Streamlit app, you can add the link here.*  
-Example:
-
-**Live App:** https://your-streamlit-app-url.streamlit.app/
+**Live App:** https://financial-data-extractor-jfg8h8wn4xgzyhxfeltcjq.streamlit.app/
 
 ---
 
 ## 🖥️ Streamlit Interface
-
-*(Add your interface image here if needed)*  
-Example:
 
 ![App Screenshot](https://github.com/yourusername/yourrepo/blob/main/screenshot.png)
 
@@ -191,6 +185,6 @@ EPS came in at 1.85 compared to an expected 1.77.
 
 ---
 
-## 👤 Author
+## 🙅‍♂️ Author
 
 **Prabal Kumar Deka**
