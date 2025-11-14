@@ -13,7 +13,7 @@ It extracts key values such as **Actual Revenue, Expected Revenue, Actual EPS, a
 
 ## 🖥️ Streamlit Interface
 
-![App Screenshot](https://github.com/yourusername/yourrepo/blob/main/screenshot.png)
+![App Screenshot](https://github.com/prabalpkd/financial-data-extractor/blob/main/financial_data.png)
 
 ---
 
