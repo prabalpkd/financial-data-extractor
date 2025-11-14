@@ -1,5 +1,4 @@
-
-#📊📊 Financial Data Extractor
+# 📊📊Financial Data Extractor
 
 This project builds a **Financial Data Extraction** system that converts unstructured financial paragraphs into structured metrics.  
 It extracts key values such as **Actual Revenue, Expected Revenue, Actual EPS, and Expected EPS** using **LangChain, Groq, and Llama-3.3-70B**, and presents them in a clean table using **Streamlit**.
