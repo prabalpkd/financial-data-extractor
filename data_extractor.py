@@ -1,0 +1,36 @@
+from langchain_groq import ChatGroq
+from langchain_core.prompts import PromptTemplate
+from langchain_core.output_parsers import JsonOutputParser
+from langchain_core.exceptions import OutputParserException
+
+from dotenv import load_dotenv
+load_dotenv()
+
+llm = ChatGroq(model_name='llama-3.3-70b-versatile')
+
+# --- Mock function that returns the financial data JSON ---
+def extract_financial_data(article_text: str) -> dict:
+    prompt = '''
+    From the below article, extract revenue and eps in JSON format containing the
+    following keys: 'revenue_actual', 'revenue_expected', 'eps_actual', 'eps_expected'.
+    Each value should have a unit such as billion or million.
+    Only return the valid JSON. No preamble.
+
+    Article
+    ============
+    {article}
+    '''
+
+    pt = PromptTemplate.from_template(prompt)
+    global llm
+    chain = pt | llm
+
+    response = chain.invoke({"article": article_text})
+    parser = JsonOutputParser()
+
+    try:
+        response = parser.parse(response.content)
+    except OutputParserException:
+        raise OutputParserException("Context too big, Unable to parse. Sorry!!!")
+
+    return response
